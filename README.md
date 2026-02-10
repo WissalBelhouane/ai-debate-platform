@@ -1,5 +1,10 @@
 # 🤖 AI Debate Platform
 
+![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/ai-debate-platform?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/YOUR_USERNAME/ai-debate-platform?style=flat-square)
+![Python version](https://img.shields.io/badge/python-3.11%2B-blue?style=flat-square)
+![Platform](https://img.shields.io/badge/platform-local--AI-success?style=flat-square)
+
 A fully local, multi-agent AI debate system where different AI personas argue, moderate, and fact-check any topic you give them — **100% free, offline, and open-source**.
 
 ---
@@ -13,8 +18,12 @@ Download and install Ollama from:
 Then pull the model:
 ```bash
 ollama pull llama3.2
+```
+
+---
 
 ### 2️⃣ Run the System
+```bash
 # Clone the repository
 git clone https://github.com/YOUR_USERNAME/ai-debate-platform.git
 cd ai-debate-platform
@@ -29,149 +38,97 @@ pip install -r requirements.txt
 
 # Start a debate
 python run_debate.py "Should homework be banned?"
-🎯 What It Does
-You give a topic → 4 AI agents debate it
+```
 
-🤖 Pro Agent – Argues FOR the topic
+---
 
-❌ Con Agent – Argues AGAINST the topic
+## 🎯 What It Does
 
-⚖️ Moderator – Controls debate flow
+You give a topic → **4 AI agents debate it**
 
-📊 Fact-Checker – Verifies claims
+- 🤖 **Pro Agent** – Argues FOR the topic  
+- ❌ **Con Agent** – Argues AGAINST the topic  
+- ⚖️ **Moderator** – Controls debate flow  
+- 📊 **Fact-Checker** – Verifies claims  
+<img width="956" height="283" alt="Screenshot 2026-02-09 170752" src="https://github.com/user-attachments/assets/007d03a4-c7f7-478c-8e23-63307253f7ab" />
 
-✅ Uses local AI only
-✅ No API keys required
-✅ Works offline
-✅ $0 cost forever
+✅ Uses **local AI only**  
+✅ **No API keys required**  
+✅ **Works offline**  
+✅ **$0 cost forever**
 
-📊 Example Output
+---
+
+## 📊 Example Output
+
+```text
 🎤 DEBATE: Should homework be banned?
 
 🤖 Alex (PRO): Homework causes student stress and reduces family time...
 📊 Taylor (FACT): Studies show 70% of students report homework stress...
 ❌ Sam (CON): Homework teaches discipline and reinforces learning...
 ⚖️ Jordan (MOD): Let's consider both educational value and student well-being...
-🎮 Try These Topics
-# Education
+```
+
+---
+
+## 🎮 Try These Topics
+
+```bash
 python run_debate.py "Should college be free?"
-
-# Technology
 python run_debate.py "Is AI dangerous?"
-
-# Society
 python run_debate.py "Should social media have age limits?"
-
-# Fun
 python run_debate.py "Are cats better than dogs?"
-
-# Environment
 python run_debate.py "Should plastic be banned?"
-🏗️ Architecture
+```
+
+---
+
+## 🏗️ Architecture
+
+```text
 User Topic → Orchestrator → 4 Agents → Debate → Transcript
-    │           │           │    │        │         │
-    └───────────┼───────────┼────┼────────┼─────────┘
-                ↓           ↓    ↓        ↓
-           Controls   Pro   Con  Mod   Fact-check
-                      │     │    │         │
-                      └─────┼────┼─────────┘
-                            ↓    ↓
-                      Real-time Debate
-📁 Project Structure
-ai-debate-platform/
-├── agents/
-│   ├── agent_base.py
-│   ├── pro_agent.py
-│   ├── con_agent.py
-│   ├── moderator.py
-│   └── fact_checker.py
-├── core/
-│   └── orchestrator_fixed.py
-├── run_debate.py
-├── app.py
-├── requirements.txt
-├── README.md
-└── .gitignore
-🛠️ Tech Stack
-Python 3.11+
 
-LangChain (agent framework)
+<img width="1473" height="813" alt="Screenshot 2026-02-09 171213" src="https://github.com/user-attachments/assets/3ffc72b7-9774-44b1-9098-b5aeeaf8ddc7" />
 
-Ollama (local LLM runtime)
+```
 
-LLaMA 3.2
+## 🛠️ Tech Stack
 
-Streamlit (web interface)
+- **Python 3.11+**
+- **LangChain**
+- **Ollama**
+- **LLaMA 3.2**
+- **Streamlit**
 
-🌐 Web Interface
-Run the web app:
+---
 
+## 🌐 Web Interface
+
+```bash
 streamlit run app.py
-Open in your browser:
-👉 http://localhost:8501
 
-Features
-🎨 Animated gradient UI
 
-📱 Fully responsive
+Open: http://localhost:8501
+```
+---
 
-⌨️ Typing effects
+## 🤝 Contributing
 
-💾 Download debate transcripts
+1. Fork the repository  
+2. Create a feature branch  
+3. Commit your changes  
+4. Push to your branch  
+5. Open a Pull Request  
 
-⚙️ Custom agent names, rounds & models
+---
 
-🎯 One-click topic buttons
+## 📄 License
 
-📈 Debate statistics
+MIT License
 
-🔧 Customization
-Change AI Model
-Edit agent_base.py:
+---
 
-def __init__(self, name, role, model="llama3.2"):
-Available Models
-Model	Size	Notes
-llama3.2	~4GB	Best balance (recommended)
-llama2	~3.8GB	Lightweight
-mistral	~4.1GB	Very fast
-gemma2	~9GB	Highest quality
-📈 Performance
-⏱️ Debate duration: 30 sec – 2 min per round
+## ⭐ Support
 
-💾 RAM usage: ~4GB
-
-💽 Storage: < 4.5GB
-
-💰 Cost: $0
-
-⚡ Response time: 2–5 sec per agent
-
-🤝 Contributing
-Fork the repository
-
-Create a feature branch
-
-git checkout -b feature/AmazingFeature
-Commit your changes
-
-git commit -m "Add AmazingFeature"
-Push to your branch
-
-git push origin feature/AmazingFeature
-Open a Pull Request 🚀
-
-📄 License
-MIT License — see LICENSE file for details.
-
-🙏 Acknowledgments
-Ollama – Local AI runtime
-
-LangChain – Agent orchestration
-
-Meta – LLaMA models
-
-Streamlit – Web UI
-
-Open-source community ❤️
-
+If this project helped you, please give it a ⭐ on GitHub!
