@@ -88,10 +88,11 @@ python run_debate.py "Should plastic be banned?"
 
 ```text
 User Topic → Orchestrator → 4 Agents → Debate → Transcript
+```
 
 <img width="1473" height="813" alt="Screenshot 2026-02-09 171213" src="https://github.com/user-attachments/assets/3ffc72b7-9774-44b1-9098-b5aeeaf8ddc7" />
 
-```
+
 
 ## 🛠️ Tech Stack
 
